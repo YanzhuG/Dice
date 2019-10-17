@@ -1,6 +1,6 @@
 void setup()
 {
-  size(590, 500);
+  size(590, 700);
   background(#F1E0D6);
   noLoop();
 }
@@ -11,7 +11,7 @@ void draw()
 
     for (int y=50; y<500; y+=55) {
       for (int x=50; x<500; x+=55) {
-        Dice a = new Dice(x, y, color((int)(Math.random()*256),(int)(Math.random()*256),255));
+        Dic a = new Dic(x, y, color((int)(Math.random()*256),(int)(Math.random()*256),255));
         a.show();
          count+=a.mynum;
       }
@@ -29,10 +29,10 @@ void mousePressed()
 {
   redraw();
 }
-class Dice //models one single dice cube
+class Dic //models one single dice cube
 {
   int mycol, mynum, myx, myy;//variable declarations here 
-  Dice(int x, int y, int col) //constructor
+  Dic(int x, int y, int col) //constructor
   {
     mycol=col;
     myx=x;
